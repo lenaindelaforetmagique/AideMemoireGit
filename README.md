@@ -20,19 +20,31 @@ Git permet de faire de gérer les versions d'un projet.
 ## Vocabulaire
 ### Commit
 Un commit est une sauvegarde du projet à un instant T. Chaque commit est identifié par :
+
     * une clef _SHA_ (Secure Hash Algorithm) qui permet d'identifier de manière unique un commit
     * un auteur
     * une date
     * un message de description
 
 ### Index
+Avant de devenir un commit, les fichiers d'un projets doivent être indexés.
+Ceci permet d'indiquer à git quels fichiers doivent être inclus au prochain commit.
 
-### commit
+### Remote
 
-SHA : clef d'identification d'un commit
+
+### Branch
+
+
+### Pull
+
+
+### Push
+
+###
 
 ## Lignes de commandes courantes
-https://git-scm.com/docs
+[git Reference](https://git-scm.com/docs)
 
 ### Paramétrage
     git config --global user.name "Nom/Pseudo"
