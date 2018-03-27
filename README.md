@@ -1,24 +1,16 @@
-# Aide mémoire git
+# Aide mémoire git/github
 _X. Morin_
+---
 
-## Lancer la console Git Bash
-
-Démarrer > Tous les programmes > Git > Git Bash
-
-## Fonctions courantes console
-
-    pwd :   Print Working Directory
-    cd :    Change Directory
-    ls :    List Segments (liste du contenu d'un répertoire)
-    mkdir : Make Directory
-    touch :
-
-## Principe de fonctionnement
-
+## Généralités sur Git/GitHub
 Git permet de faire de gérer les versions d'un projet.
 
-## Vocabulaire
-### Commit
+### Vocabulaire
+
+#### Repository
+Répertoire de projet
+
+#### Commit
 Un commit est une sauvegarde du projet à un instant T. Chaque commit est identifié par :
 
     * une clef _SHA_ (Secure Hash Algorithm) qui permet d'identifier de manière unique un commit
@@ -26,25 +18,46 @@ Un commit est une sauvegarde du projet à un instant T. Chaque commit est identi
     * une date
     * un message de description
 
-### Index
-Avant de devenir un commit, les fichiers d'un projets doivent être indexés.
+#### Index
+Avant de devenir un commit, les fichiers d'un projet doivent être indexés.
 Ceci permet d'indiquer à git quels fichiers doivent être inclus au prochain commit.
 
-### Remote
+#### Branch
 
 
-### Branch
+#### Pull
+Action de mettre à jour le répertoire local de travail à partir d'un repository distant.
+
+#### Push
+Action d'envoyer le dernier commit à un repository distant.
+
+#### Remote
+Repository distant.
 
 
-### Pull
 
+## Lancer la console Git Bash
 
-### Push
+### Sous MacOSx / Linux
+Ouvrir le Terminal
 
-###
+### Sous Windows
+Démarrer > Tous les programmes > Git > Git Bash
+
+### Fonctions courantes console
+
+    pwd :   Print Working Directory
+    cd :    Change Directory
+    ls :    List Segments (liste du contenu d'un répertoire)
+    mkdir : Make Directory
+    rm :    remove file
+    touch :
+
 
 ## Lignes de commandes courantes
 [git Reference](https://git-scm.com/docs)
+
+    git --help
 
 ### Paramétrage
     git config --global user.name "Nom/Pseudo"
@@ -52,7 +65,7 @@ Ceci permet d'indiquer à git quels fichiers doivent être inclus au prochain co
 
 ### Commandes générales sur un repository
     git init :                  activer le répertoire courant
-    git clone _lienGitHub_ :    copie dans le répertoire courant le repository pointé par le _lienGitHub_
+    git clone _URLrepo_ :       copie dans le répertoire courant le repository pointé par  _URLrepo_
 
     git log :                   affiche l'historique des commits du répertoire
     git status :                affiche le statut du répertoire courant
