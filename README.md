@@ -1,16 +1,19 @@
 # Aide mémoire git/github
-_X. Morin_
----
+ _X. Morin_
+----
 
 ## Généralités sur Git/GitHub
+
 Git permet de faire de gérer les versions d'un projet.
 
 ### Vocabulaire
 
 #### Repository
+
 Répertoire de projet
 
 #### Commit
+
 Un commit est une sauvegarde du projet à un instant T. Chaque commit est identifié par :
 
     * une clef _SHA_ (Secure Hash Algorithm) qui permet d'identifier de manière unique un commit
@@ -19,29 +22,32 @@ Un commit est une sauvegarde du projet à un instant T. Chaque commit est identi
     * un message de description
 
 #### Index
+
 Avant de devenir un commit, les fichiers d'un projet doivent être indexés.
 Ceci permet d'indiquer à git quels fichiers doivent être inclus au prochain commit.
 
 #### Branch
 
-
 #### Pull
+
 Action de mettre à jour le répertoire local de travail à partir d'un repository distant.
 
 #### Push
+
 Action d'envoyer le dernier commit à un repository distant.
 
 #### Remote
+
 Repository distant.
-
-
 
 ## Lancer la console Git Bash
 
 ### Sous MacOSx / Linux
+
 Ouvrir le Terminal
 
 ### Sous Windows
+
 Démarrer > Tous les programmes > Git > Git Bash
 
 ### Fonctions courantes console
@@ -53,17 +59,19 @@ Démarrer > Tous les programmes > Git > Git Bash
     rm :    remove file
     touch :
 
-
 ## Lignes de commandes courantes
+
 [git Reference](https://git-scm.com/docs)
 
     git --help
 
 ### Paramétrage
+
     git config --global user.name "Nom/Pseudo"
     git config --global user.email "email"
 
 ### Commandes générales sur un repository
+
     git init :                  activer le répertoire courant
     git clone _URLrepo_ :       copie dans le répertoire courant le repository pointé par  _URLrepo_
 
@@ -81,6 +89,6 @@ Démarrer > Tous les programmes > Git > Git Bash
     git revert _SHA_ :          crée un nouveau commit annulant le dernier commit
     git reset --hard :          annuler tous les changements effectués depuis le dernier commit
 
-
+    git remote add origin _URLrepo_ : ajoute le remote 'origin'
     git push origin master :    envoie le commit sur le remote origin dans la branche master
     git pull origin master :    récupère le dernier commit présent
