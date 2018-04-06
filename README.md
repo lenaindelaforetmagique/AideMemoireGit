@@ -57,7 +57,8 @@ Démarrer > Tous les programmes > Git > Git Bash
     ls :    List Segments (liste du contenu d'un répertoire)
     mkdir : Make Directory
     rm :    remove file
-    touch :
+    touch : créer un fichier
+    cat :   affiche le contenu d'un fichier
 
 ## Lignes de commandes courantes
 
@@ -85,10 +86,32 @@ Démarrer > Tous les programmes > Git > Git Bash
     git commit -a :             commit de tous les fichiers modifiés qui existent déjà dans l'index (add + commit)
 
     git checkout _SHA_ :        rend courrant le commit identifié par _SHA_
-    git checkout master :       rend courant le dernier commit de la branche principale
+    git checkout _branchname_ : rend courante la branche _branchname_ (master par exemple)
     git revert _SHA_ :          crée un nouveau commit annulant le dernier commit
     git reset --hard :          annuler tous les changements effectués depuis le dernier commit
 
     git remote add origin _URLrepo_ : ajoute le remote 'origin'
     git push origin master :    envoie le commit sur le remote origin dans la branche master
     git pull origin master :    récupère le dernier commit présent
+
+    git branch :                retourne la liste des branches
+    git branch _branchname_ :   crée une branche
+    git branch -b _branchname_ : crée une branche et s'y positionne.
+
+    git merge _branchname_ :    fusionne la branche _branchname_ sur la branche actuelle
+
+    git blame
+
+### Gestion des conflits
+Dans le cas où `git merge _branchname_` fait apparaître un ou plusieurs conflits, ces conflits sont signalés à l'intérieur des fichiers par :
+
+    <<<<<<HEAD
+    contenu conflictuel version branche courante
+    ==========
+    contenu conflictuel version _branchname_
+    >>>>>> _branchname_
+
+
+Après avoir résolu tous les conflits :
+
+    git commit
